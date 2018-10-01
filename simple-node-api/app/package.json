@@ -1,0 +1,11 @@
+{
+  "name": "simple-node-api",
+  "version": "1.0.0",
+  "description": "API simples em Node para responder uma requisição GET",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
