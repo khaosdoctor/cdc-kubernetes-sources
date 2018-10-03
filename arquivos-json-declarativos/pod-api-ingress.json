@@ -1,0 +1,24 @@
+{
+  "apiVersion": "extensions/v1beta1",
+  "kind": "Ingress",
+  "metadata": {
+    "name": "api-ing"
+  },
+  "spec": {
+    "backend": {
+      "serviceName": "default-http-backend",
+      "servicePort": 80
+    },
+    "rules": [{
+      "host": "minhaapi.info", 
+      "http": {
+        "paths": [{
+          "backend": {
+            "serviceName": "api-pod", 
+            "servicePort": 8080
+          }
+        }]
+      }
+    }]
+  }
+}
