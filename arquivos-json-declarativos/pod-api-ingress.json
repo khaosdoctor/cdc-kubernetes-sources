@@ -14,8 +14,18 @@
       "http": {
         "paths": [{
           "backend": {
-            "serviceName": "api-pod", 
-            "servicePort": 8080
+            "serviceName": "pod-api-svc", 
+            "servicePort": 8085
+          }
+        }]
+      }
+    }, {
+      "host": "minhaapi.info.192.168.99.100.nip.io",
+      "http": {
+        "paths": [{
+          "backend": {
+            "serviceName": "pod-api-svc",
+            "servicePort": 8085
           }
         }]
       }

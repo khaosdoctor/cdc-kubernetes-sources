@@ -5,12 +5,13 @@
     "name": "pod-api-svc"
   },
   "spec": {
+    "type": "NodePort",
     "selector": {
       "app": "simple-api"
     },
     "ports": [{
       "protocol": "TCP",
-      "port": 80,
+      "port": 8085,
       "targetPort": "porta-api"
     }]
   }
