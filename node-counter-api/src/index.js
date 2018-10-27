@@ -15,14 +15,14 @@ app.get('/:username', (req, res) => {
   if(!fs.existsSync(filePath)) {
     if (!fs.existsSync(dirLocation)) fs.mkdirSync(dirLocation)
     fs.writeFileSync(filePath, JSON.stringify({count: 1}))
-    return res.send(format(MESSAGE, req.params.user, 1))
+    return res.send(format(MESSAGE, req.params.username, 1))
   }
 
   const fileContents = JSON.parse(fs.readFileSync(filePath).toString())
   const newCount = fileContents.count + 1
 
   fs.writeFileSync(filePath, JSON.stringify({count: newCount}))
-  return res.send(format(MESSAGE, req.params.user, newCount))
+  return res.send(format(MESSAGE, req.params.username, newCount))
 })
 
 app.listen(process.env.PORT, () => console.log(`Ouvindo na porta ${process.env.PORT}`))
