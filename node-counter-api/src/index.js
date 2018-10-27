@@ -11,7 +11,6 @@ app.get('/favicon.ico', (req, res) => res.status(204))
 
 app.get('/:username', (req, res) => {
   const filePath = path.resolve(path.join(dirLocation, `${req.params.username}.json`))
-  console.log(fs.existsSync(filePath), filePath)
 
   if(!fs.existsSync(filePath)) {
     if (!fs.existsSync(dirLocation)) fs.mkdirSync(dirLocation)
