@@ -7,11 +7,16 @@
   "spec": {
     "containers": [{
       "name": "counter-api",
-      "image": "khaosdoctor/node-api-counter",
+      "image": "khaosdoctor/node-counter-api",
       "env": [{
-        "name": "PORT",
-        "value": "8080"
-      }],
+          "name": "PORT",
+          "value": "8080"
+        },
+        {
+          "name": "COUNTER_DIRECTORY",
+          "value": "/etc/counter-volume"
+        }
+      ],
       "ports": [{
         "containerPort": 8080,
         "name": "porta-api"
