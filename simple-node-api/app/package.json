@@ -6,6 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Lucas Santos <lhs.santoss@gmail.com>",
+  "license": "MIT"
 }

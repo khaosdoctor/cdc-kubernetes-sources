@@ -1,0 +1,14 @@
+{
+  "name": "api-counter",
+  "version": "1.0.0",
+  "description": "API para contagem de acessos de usuários utilizado no capítulo de Volumes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Lucas Santos <lhs.santoss@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
