@@ -1,0 +1,29 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "counter-api"
+  },
+  "spec": {
+    "containers": [{
+      "name": "counter-api",
+      "image": "khaosdoctor/node-api-counter",
+      "env": [{
+        "name": "PORT",
+        "value": "8080"
+      }],
+      "ports": [{
+        "containerPort": 8080,
+        "name": "porta-api"
+      }],
+      "volumeMounts": [{
+        "mountPath": "/etc/counter-volume/",
+        "name": "counter-volume"
+      }]
+    }],
+    "volumes": [{
+      "name": "counter-volume",
+      "emptyDir": {}
+    }]
+  }
+}
