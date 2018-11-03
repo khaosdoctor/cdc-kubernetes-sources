@@ -1,0 +1,30 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "mongo-pod",
+    "labels": {
+      "role": "database"
+    }
+  },
+  "spec": {
+    "volumes": [{
+      "name": "mongo-volume",
+      "persistentVolumeClaim": {
+        "claimName": "mongo-claim"
+      }
+    }],
+    "containers": [{
+      "name": "mongo-container",
+      "image": "mongo",
+      "ports": [{
+        "containerPort": 27017,
+        "name": "mongo-port"
+      }],
+      "volumeMounts": [{
+        "mountPath": "/data/db",
+        "name": "mongo-volume"
+      }]
+    }]
+  }
+}
