@@ -15,3 +15,5 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `mongo-pv.json`: Arquivo de criação do volume local para o mongodb
 - `mongo-pvc.json`: Arquivo de criação para o PVC que irá consumir o PV acima
 - `mongo-pod.json`: Arquivo de criação para o serviço do mongo usando volumes locais
+- `azure-mongo-pvc.json`: Arquivo para criação de PVC utilizando o Azure Disk
+- `azure-mongo-pod.json`: Cria um banco de dados MongoDB usando o Azure Disk como volume

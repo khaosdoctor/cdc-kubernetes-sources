@@ -1,0 +1,22 @@
+{
+  "apiVersion": "v1",
+  "kind": "PersistentVolumeClaim",
+  "metadata": {
+    "name": "azure-mongo-pvc",
+    "namespace": "default",
+    "labels": {
+      "role": "database"
+    }
+  },
+  "spec": {
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "storageClassName": "default",
+    "resources": {
+      "requests": {
+        "storage": "2Gi"
+      }
+    }
+  }
+}
