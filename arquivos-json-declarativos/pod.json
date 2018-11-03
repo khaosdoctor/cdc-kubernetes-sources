@@ -5,14 +5,22 @@
     "name": "mongodb-pod"
   },
   "spec": {
-    "containers": [
-      {
-        "name": "mongodb",
-        "image": "mongo",
-        "ports": [{
-          "containerPort": 27017
-        }]
-      }
-    ]
+    "containers": [{
+      "name": "mongodb",
+      "image": "mongo",
+      "resources": {
+        "requests": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "limits": {
+          "cpu": "250m",
+          "memory": "256Mi"
+        }
+      },
+      "ports": [{
+        "containerPort": 27017
+      }]
+    }]
   }
 }
