@@ -1,0 +1,15 @@
+{
+  "name": "node-crypto-api-file",
+  "version": "1.0.0",
+  "description": "API simples de codificação e decodificação de dados usando secrets montados em volumes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node src/index.js"
+  },
+  "author": "Lucas Santos <lhs.santoss@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
