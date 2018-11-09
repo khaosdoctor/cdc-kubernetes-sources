@@ -1,0 +1,39 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "crypto-file-api",
+    "labels": {
+      "app": "crypto-file-api"
+    }
+  },
+  "spec": {
+    "containers": [
+      {
+        "name": "crypto-file",
+        "image": "khaosdoctor/node-crypto-api-file",
+        "env": [
+            {"name": "PORT", "value": "8080"},
+            {"name": "SECRET_VOLUME_DIR", "value": "/crypto"},
+            {"name": "SECRET_VOLUME_FILENAME", "value": "aes_secret"}
+        ],
+        "ports": [{
+          "containerPort": 8080,
+          "name": "porta-api"
+        }],
+        "volumeMounts": [{
+          "name": "secret-volume",
+          "mountPath": "/crypto",
+          "readOnly": true
+        }]
+      }
+    ],
+    "volumes": [{
+      "name": "secret-volume", 
+      "secret": { 
+        "secretName": "crypto-secret" 
+      }
+    }]
+  }
+}
+

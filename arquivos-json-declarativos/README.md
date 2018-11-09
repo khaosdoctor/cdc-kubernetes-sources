@@ -18,3 +18,5 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `azure-mongo-pvc.json`: Arquivo para criação de PVC utilizando o Azure Disk
 - `azure-mongo-pod.json`: Cria um banco de dados MongoDB usando o Azure Disk como volume
 - `db-secret.json`: Arquivo exemplo para a criação de um secret literal
+- `pod-api-crypto-file.json`: Pod de criptografia usando um secret como volume
+- `secret-api-crypto-file.json`: Secret utilizado para codificar o dado do pod anterior
