@@ -1,0 +1,31 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "crypto-env-api",
+    "labels": {
+      "app": "crypto-env-api"
+    }
+  },
+  "spec": {
+    "containers": [
+      {
+        "name": "crypto-env",
+        "image": "khaosdoctor/node-crypto-api-env",
+        "env": [
+            {"name": "PORT", "value": "8080"},
+            {
+              "name": "CRYPTO_PASS", 
+              "valueFrom": {
+                "secretKeyRef": {"name": "crypto-secret", "key": "aes_secret"}
+              }
+            }
+        ],
+        "ports": [{
+          "containerPort": 8080,
+          "name": "porta-api"
+        }]
+      }
+    ]
+  }
+}

@@ -20,3 +20,5 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `db-secret.json`: Arquivo exemplo para a criação de um secret literal
 - `pod-api-crypto-file.json`: Pod de criptografia usando um secret como volume
 - `secret-api-crypto-file.json`: Secret utilizado para codificar o dado do pod anterior
+- `pod-api-crypto-env.json`: Pod de criptografia identico ao de arquivos, porém usando variáveis de ambiente
+- `secret-api-crypto-env.json`: Secret para completar o pod utilizando variáveis de ambiente 
