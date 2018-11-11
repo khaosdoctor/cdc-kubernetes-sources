@@ -22,3 +22,5 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `secret-api-crypto-file.json`: Secret utilizado para codificar o dado do pod anterior
 - `pod-api-crypto-env.json`: Pod de criptografia identico ao de arquivos, porém usando variáveis de ambiente
 - `secret-api-crypto-env.json`: Secret para completar o pod utilizando variáveis de ambiente 
+- `pod-api-private-cr.json`: Arquivo de pod que utiliza um registro de contêineres privado criado na Azure
+- `configmap-node-api.json`: Configmap criado para ser fonte de configurações para o capítulo de configmaps
