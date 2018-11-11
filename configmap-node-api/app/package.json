@@ -1,0 +1,11 @@
+{
+  "name": "configmap-node-api",
+  "version": "1.0.0",
+  "description": "API simples em Node para responder uma requisição GET com uma variável de ambiente",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Lucas Santos <lhs.santoss@gmail.com>",
+  "license": "MIT"
+}
