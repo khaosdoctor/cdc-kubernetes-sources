@@ -1,0 +1,38 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "simple-deploy",
+    "labels": {
+      "app": "simple-api"
+    }
+  },
+  "spec": {
+    "replicas": 3,
+    "selector": {
+      "matchLabels": {
+        "app": "simple-api"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "simple-api"
+        }
+      },
+      "spec": {
+        "containers": [{
+          "name": "api-pod",
+          "image": "khaosdoctor/simple-node-api",
+          "env": [{
+            "name": "PORT",
+            "value": "8080"
+          }],
+          "ports": [{
+            "containerPort": 8080
+          }]
+        }]
+      }
+    }
+  }
+}
