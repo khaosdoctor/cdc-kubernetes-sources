@@ -5,16 +5,14 @@
     "name": "scalable-deploy",
     "labels": {
       "app": "scalable-api"
+    },
+    "annotations": {
+      "kubernetes.io/change-cause": "Criação inicial"
     }
   },
   "spec": {
-    "replicas": 10,
-    "strategy": {
-      "rollingUpdate": {
-        "maxSurge": 5,
-        "maxUnavailable": 5
-      }
-    },
+    "revisionHistoryLimit": 5,
+    "replicas": 3,
     "selector": {
       "matchLabels": {
         "app": "scalable-api"
@@ -29,7 +27,7 @@
       "spec": {
         "containers": [{
           "name": "api-pod",
-          "image": "khaosdoctor/scalable-node-api:1.0.0",
+          "image": "khaosdoctor/scalable-node-api",
           "env": [{
             "name": "PORT",
             "value": "8080"
