@@ -27,3 +27,6 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `hello-api-pod-file.json`: Pod que utiliza o configmap acima como um volume
 - `hello-api-pod.json`: Pod que utiliza o configmap `configmap-hello-api.json` como uma variável de ambiente
 - `simple-api-deploy.json`: Deployment utilizado com a `simple-api` no capítulo de deployments
+- `scalable-api-deploy.json`: Deployment utilizado para demonstração da escalabilidade de aplicações no capítulo sobre deployments
+- `scalable-api-service.json`: Service utilizado para demonstração da escalabilidade de aplicações no capítulo sobre deployments
+- `scalable-api-ingress.json`: Ingress utilizado para demonstração da escalabilidade de aplicações no capítulo sobre deployments

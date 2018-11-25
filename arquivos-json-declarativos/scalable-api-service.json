@@ -1,0 +1,21 @@
+{
+  "apiVersion": "v1",
+  "kind": "Service",
+  "metadata": {
+    "name": "scalable-api",
+    "labels": {
+      "app": "scalable-api"
+    }
+  },
+  "spec": {
+    "selector": {
+      "app": "scalable-api"
+    },
+    "ports": [{
+      "protocol": "TCP",
+      "port": 8086,
+      "name": "svc-port",
+      "targetPort": "api-port"
+    }]
+  }
+}

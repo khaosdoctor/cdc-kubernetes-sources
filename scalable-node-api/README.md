@@ -2,6 +2,8 @@
 
 > API de exemplo utilizada nos capítulos sobre deployments
 
+> **Nota:** Esta aplicação serve de base tanto para a imagen `scalable-node-api:1.0.0` quando para `heavy-node-api` e `scalable-node-api:2.0.0`
+
 ## Conteúdo
 
 - `Dockerfile`: Utilizado para criar a imagem que vamos publicar no K8S
