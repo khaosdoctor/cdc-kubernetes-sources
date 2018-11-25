@@ -30,3 +30,7 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `scalable-api-deploy.json`: Deployment utilizado para demonstração da escalabilidade de aplicações no capítulo sobre deployments
 - `scalable-api-service.json`: Service utilizado para demonstração da escalabilidade de aplicações no capítulo sobre deployments
 - `scalable-api-ingress.json`: Ingress utilizado para demonstração da escalabilidade de aplicações no capítulo sobre deployments
+- `heavy-api-deploy.json`: Deployment utilizado para demonstração da escalabilidade de aplicações com HPAs no capítulo sobre os mesmos (simula uma api com carga alta)
+- `heavy-api-service.json`: Service utilizado para demonstração da escalabilidade de aplicações com HPAs no capítulo sobre os mesmos
+- `heavy-api-ingress.json`: Ingress utilizado para demonstração da escalabilidade de aplicações com HPAs no capítulo sobre os mesmos
+- `heavy-api-hpa.json`: Autoscaler utilizado para escalar `heavi-api-deploy.json` no capítulo sobre HPAs

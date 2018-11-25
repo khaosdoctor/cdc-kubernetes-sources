@@ -1,0 +1,23 @@
+{
+  "apiVersion": "extensions/v1beta1",
+  "kind": "Ingress",
+  "metadata": {
+    "name": "heavy-api",
+    "annotations": {
+      "kubernetes.io/ingress.class": "addon-http-application-routing"
+    }
+  },
+  "spec": {
+    "rules": [{
+      "host": "heavyapi.f8b8184f326740f9b169.eastus.aksapp.io",
+      "http": {
+        "paths": [{
+          "backend": {
+            "serviceName": "heavy-api",
+            "servicePort": "svc-port"
+          }
+        }]
+      }
+    }]
+  }
+}

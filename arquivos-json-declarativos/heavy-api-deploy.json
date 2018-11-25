@@ -1,0 +1,49 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "heavy-deploy",
+    "labels": {
+      "app": "heavy-api"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "heavy-api"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "heavy-api"
+        }
+      },
+      "spec": {
+        "containers": [{
+          "name": "api-pod",
+          "image": "khaosdoctor/heavy-node-api",
+          "resources": {
+            "requests": {
+              "cpu": "200m",
+              "memory": "256M"
+            },
+            "limits": {
+              "cpu": "400m",
+              "memory": "512M"
+            }
+          },
+          "env": [{
+            "name": "PORT",
+            "value": "8080"
+          }],
+          "ports": [{
+            "containerPort": 8080,
+            "name": "api-port"
+          }]
+        }]
+      }
+    }
+  }
+}
