@@ -36,3 +36,4 @@ Estes são os arquivos declarativos que vão criar nossos serviços, pods e qual
 - `heavy-api-hpa.json`: Autoscaler utilizado para escalar `heavi-api-deploy.json` no capítulo sobre HPAs
 - `pi-job.json`: Job de execução para cálculo do número Pi usado no capítulo de Cronjobs
 - `pi-cronjob.json`: Job de execução em crontab do cálculo do número Pi utilizado no capítulo de Cronjobs
+- `namespace.json`: Cria um namespace exemplo
