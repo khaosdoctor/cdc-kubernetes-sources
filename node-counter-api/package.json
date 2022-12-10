@@ -9,6 +9,6 @@
   "author": "Lucas Santos <lhs.santoss@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
